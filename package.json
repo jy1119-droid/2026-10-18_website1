@@ -1,0 +1,28 @@
+{
+  "name": "fighter-ready",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 12000",
+    "build": "next build && node scripts/export-root.mjs",
+    "start": "node scripts/serve.mjs",
+    "export:root": "node scripts/export-root.mjs",
+    "test:engine": "tsc src/lib/sports.ts src/lib/matchmaking.ts src/lib/validation.ts scripts/engine-check.ts --outDir node_modules/.cache/engine-check --module commonjs --target ES2022 --moduleResolution node --esModuleInterop --skipLibCheck --strict && node node_modules/.cache/engine-check/scripts/engine-check.js"
+  },
+  "dependencies": {
+    "framer-motion": "^14.3.0",
+    "lucide-react": "^1.59.0",
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3"
+  }
+}
